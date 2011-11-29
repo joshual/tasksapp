@@ -17,16 +17,19 @@ group :assets do
   gem 'uglifier'
 end
 
-group :tests, :development do
+gem 'devise'
+
+
+gem 'jquery-rails'
+
+group :test, :development do
 	gem 'turn'
 	gem 'rspec-rails'
 	gem 'capybara'
 	gem 'guard-rspec'
 	gem 'growl_notify'
+	gem 'launchy'
 end
-
-
-gem 'jquery-rails'
 
 # Use unicorn as the web server
 # gem 'unicorn'

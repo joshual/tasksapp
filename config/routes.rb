@@ -1,6 +1,11 @@
 Tasks::Application.routes.draw do
+  devise_for :users
+  devise_for :users do
+    get "sign_in", :to => "devise/sessions#new"
+    get "sign_out", :to => "devise/sessions#destroy"
+  end
   root :to => 'Tasks#index'
-  get "tasks/index"
+  #get "tasks/index"
 
   resources :tasks
   # The priority is based upon order of creation:
